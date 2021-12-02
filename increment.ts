@@ -3,7 +3,7 @@ function increment(num: number): number {
 }
 console.log(increment(99));
 
-
+// next https://book.yyts.org/reference/values-types-variables/structural-subtyping
 
 
 
