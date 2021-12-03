@@ -37,3 +37,32 @@ const pikachu: Wild = {
     height,
     weight
 }
+
+let array: number[];
+array = [32432]
+
+let numArray: Array<number> // 数字のみの配列
+numArray = [1234]
+
+let strArray: Array<string> // strのみのはい列
+strArray = ["1234"]
+
+const list1 = [1, 2, 3]
+const list2 = [1, 2, 3]
+
+console.log(list1 === list2)
+
+const abc: Array<string> = ["a", "b", "c"]
+const character: string = abc[1]
+const character2: string = abc[3333]
+console.log(character)
+console.log(character2) // undefinedだけどエラーにはならない
+
+const abcd: string[] = ["a", "b", "c"];
+const charactersss: string | undefined = abc[0];
+console.log(charactersss.toUpperCase())
+
+
+const aasdf: readonly number[] = [1, 2, 3] // readonlyをつけることで、呼び出し専用にできる
+// aasdf[0] = 10  値の上書きは不可
+console.log(aasdf)
