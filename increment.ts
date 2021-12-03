@@ -66,3 +66,23 @@ console.log(charactersss.toUpperCase())
 const aasdf: readonly number[] = [1, 2, 3] // readonlyをつけることで、呼び出し専用にできる
 // aasdf[0] = 10  値の上書きは不可
 console.log(aasdf)
+
+const arrrrry: number[] = [1, 2, 3, 4]
+const [あ, い, う, え, お] = arrrrry
+console.log(お) // undifinedになる
+
+const twoBytwo: Array<Array<number | undefined>> = [
+    [1, 3,],
+    [4, 3, 657]
+]
+console.log(twoBytwo)
+const [[onee], [three], はひ] = twoBytwo
+console.log(twoBytwo)
+
+
+const onetofive: number[] = [1, 2, 3, 4, 5]
+const [, , , four, five] = onetofive
+console.log(four)
+
+const [leve ,...aft]= onetofive // ...は、残余パターンという
+console.log(leve,aft)
