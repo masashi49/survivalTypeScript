@@ -16,3 +16,16 @@ console.log(fruits); // ['apple', 'banana']
 console.log(all); // ['apple', 'banana', 'menma', 'takoyaki']
 var alls = __spreadArray(__spreadArray([], fruits, true), footds, true);
 console.log(alls);
+var user = {
+    id: 42,
+    displayName: 'jdoe',
+    fullName: {
+        firstName: 'John',
+        lastName: 'Doe'
+    }
+};
+function userId(_a) {
+    var id = _a.id;
+    return id;
+}
+console.log(userId(user));
