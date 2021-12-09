@@ -26,11 +26,13 @@ function blockTime(timeout: number): void {
 // thenでエラーだけキャッチ 
 function errorPromise(message: string) {
     return new Promise((resolve, reject) => {
-        reject(new Error(message))
+        reject(new Error(message)) // エラーを投げると自動的にcatchで受け取れる
     })
 }
 
 // 第一引数にundifinedを渡すとエラーのみ返すthenとなる
-errorPromise("エラーハンドリング").then(undefined, (error) => {
+errorPromise("エラーハンドリング").then(() => {
+    console.log("成功")
+}).catch(error => {
     console.log(error.message)
-})
+});

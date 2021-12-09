@@ -18,11 +18,28 @@ function blockTime(timeout) {
 //     console.log("4.ブロックする処理完了")
 // },1000)
 // console.log("2.同期処理します")
-function errorPromise(message) {
-    return new Promise(function (resolve, reject) {
-        reject(new Error(message));
-    });
-}
-errorPromise("エラーハンドリング").then(undefined, function (error) {
-    console.log(error);
+// `Promise`インスタンスを作成
+var promise = new Promise(function (resolve, reject) {
+    // 非同期の処理が成功したときはresolve()を呼ぶ
+    // 非同期の処理が失敗したときにはreject()を呼ぶ
 });
+var onFulfilled = function () {
+    console.log("resolveされたときに呼ばれる");
+};
+var onRejected = function () {
+    console.log("rejectされたときに呼ばれる");
+};
+// `then`メソッドで成功時と失敗時に呼ばれるコールバック関数を登録
+promise.then(onFulfilled, onRejected);
+// thenでエラーだけキャッチ 
+// function errorPromise(message: string) {
+//     return new Promise((resolve, reject) => {
+//         reject(new Error(message)) // エラーを投げると自動的にcatchで受け取れる
+//     })
+// }
+// // 第一引数にundifinedを渡すとエラーのみ返すthenとなる
+// errorPromise("エラーハンドリング").then(() => {
+//     console.log("成功")
+// }).catch(error => {
+//     console.log(error.message)
+// });
