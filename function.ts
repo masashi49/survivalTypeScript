@@ -18,14 +18,29 @@ console.log("cat" && "dog") //の場合はcatがtrue扱いで、右を評価し�
 
 var hoge = {
     name: "ほげです",
-    say: function (word:string) {
+    say: function (word: string) {
         return this.name + word;
     }
 }
 
 console.log(hoge.say("うんこ"))
 var huga = {
-    name : "ふが出る"
+    name: "ふが出る"
 }
-console.log(hoge.say.call(huga,"callだうよ"))
-console.log(hoge.say.apply(huga,["applyだよ"]))
+console.log(hoge.say.call(huga, "callだうよ"))
+console.log(hoge.say.apply(huga, ["applyだよ"]))
+
+
+
+const stringRreduce = (array: string[]): string => {
+    return ""
+}
+const numberRreduce = (ary: number[]): number => {
+    return 2
+}
+type Recuce<T> = {
+    (array: T[], inicalValue: T): T
+}
+const reduce: Recuce<string> = (array) => {
+    return ""
+}
