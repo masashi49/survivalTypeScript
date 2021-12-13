@@ -6,10 +6,15 @@ interface Bread {
     type: string
 }
 
+interface Bread {
+    cost: number
+}
+
 // 追加した宣言は全て取り込まないとエラーになる。
 const fransPan: Bread = {
     calories: 10,
-    type: "2200"
+    type: "2200",
+    cost: 300
 }
 
 // typeで↑と同じことをしようとすると,typeの重複となりエラーが出る。
@@ -26,10 +31,15 @@ type Rice = {
     gram: string
 }
 
-type Mabodon = MaboDofu & Rice // 2つのタイプを持つ新たなtypeを作るには、&で繋げる必要がある(交差型(union)という)
+type HUUU = {
+    cost : number
+}
+
+type Mabodon = MaboDofu & Rice & HUUU // 2つのタイプを持つ新たなtypeを作るには、&で繋げる必要がある(交差型(union)という)
 
 const manoDon: Mabodon = {
     calories: 200,
     type: "やわらかい",
-    gram:"すごい"
+    gram: "すごい",
+    cost: 3000
 }
