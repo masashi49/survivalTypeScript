@@ -1,3 +1,4 @@
+"use strict";
 var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
         if (ar || !(i in from)) {
@@ -7,6 +8,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
+exports.__esModule = true;
 var fruits = ["apple", "banana"];
 fruits.push("orange"); // 元の配列を変更してしまう、破壊的操作
 console.log(fruits);
@@ -28,4 +30,6 @@ function userId(_a) {
     var id = _a.id;
     return id;
 }
-console.log(userId(user));
+//console.log(userId(user))
+var function_1 = require("./function");
+(0, function_1["default"])();

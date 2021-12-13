@@ -7,7 +7,7 @@ const all = fruits.concat(footds)
 console.log(fruits); // ['apple', 'banana']
 console.log(all); // ['apple', 'banana', 'menma', 'takoyaki']
 
-const alls = [...fruits,...footds]
+const alls = [...fruits, ...footds]
 console.log(alls)
 
 
@@ -28,10 +28,15 @@ const user = {
     }
 };
 
-function userId({ id }: { id: number }): number{ //分割代入で受け取って分割代入の方指定した
-    
+function userId({ id }: { id: number }): number { //分割代入で受け取って分割代入の方指定した
+
     return id
 }
 
 
-console.log(userId(user))
+//console.log(userId(user))
+
+import genericsBasicSample from "./function"
+
+genericsBasicSample()
+

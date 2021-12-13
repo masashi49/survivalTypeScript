@@ -44,3 +44,50 @@ type Recuce<T> = {
 const reduce: Recuce<string> = (array) => {
     return ""
 }
+
+
+export default function genericsBasicSample() {
+    //ジェネリックなし
+    const stringReduce = (array: string[], inicalValue: string): string => {
+        let result = inicalValue
+        for (let i = 0; i < array.length; i++) {
+            result += array[i]
+        }
+        return result
+    }
+    console.log(stringReduce(["may", "i", "help", "you"], "こんにちわ"))
+    const numberReduce = (array: number[], inicalValue: number): number => {
+        let result = inicalValue
+        for (let i = 0; i < array.length; i++) {
+            result += array[i]
+        }
+        return result
+    }
+    //console.log(numberReduce([100, 200, 300], 1000))
+
+    type Recuce = {
+        (array: string[], inicalValue: string): string
+        (array: number[], inicalValue: number): number
+    }
+    type GenericReduce<T> = {
+        (array: T[], inicalValue: T): T
+    }
+    const genericStringReduce: GenericReduce<string> = (array, inicalValue) => {
+        let result = inicalValue
+        for (let i = 0; i < array.length; i++) {
+            result += array[i]
+        }
+        return result
+    }
+    console.log(genericStringReduce(["a", "b", "c", "c"], "zzzzzzzz"))
+    const genericNumberReduce: GenericReduce<number> = (array, inicalValue) => {
+        let result = inicalValue
+        for (let i = 0; i < array.length; i++) {
+            result += array[i]
+        }
+        return result
+    }
+    console.log(genericNumberReduce([1,2,3,3,223,23,34,4,3,43,32,34,3,3,23], 1))
+
+
+}
