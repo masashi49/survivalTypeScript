@@ -90,4 +90,14 @@ export default function genericsBasicSample() {
     console.log(genericNumberReduce([1,2,3,3,223,23,34,4,3,43,32,34,3,3,23], 1))
 
 
+
+    // いろいろなジェネリック型の定義方法
+    //完全んな呼出しシグネチャ(ここのシグネチャにジェネリック型を割り当てる)
+    type GenericReduce2 = {
+        <T>(array: T[], inicalValue: T): T
+        <U>(array: U[], inicalValue: U): U
+    }
+
+    type Genericdfds3<T> = (array: T[], inicalValue: T) => T // 完全なシグネチャ
+    type Genericdfds4 = <T>(array: T[], inicalValue: T) => T // ここのシグネチャに割り当てる
 }
