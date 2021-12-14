@@ -32,4 +32,6 @@ function userId(_a) {
 }
 //console.log(userId(user))
 var function_1 = require("./function");
+var adbanced_1 = require("./adbanced");
 (0, function_1["default"])();
+(0, adbanced_1["default"])();

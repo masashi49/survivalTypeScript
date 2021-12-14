@@ -37,6 +37,6 @@ function userId({ id }: { id: number }): number { //分割代入で受け取っ�
 //console.log(userId(user))
 
 import genericsBasicSample from "./function"
-
+import genericsAdvancedSample from "./adbanced"
 genericsBasicSample()
-
+genericsAdvancedSample()
