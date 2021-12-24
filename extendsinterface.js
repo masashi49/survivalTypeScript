@@ -41,5 +41,10 @@ var DataStoreage = /** @class */ (function () {
 var teststorraaa = new DataStoreage();
 teststorraaa.addTtem("data1");
 teststorraaa.addTtem("data2");
-//teststorraaa.removetem("data1")
+teststorraaa.removetem("data1");
 console.log(teststorraaa.getitems());
+var numberStrage = new DataStoreage();
+numberStrage.addTtem(3);
+numberStrage.addTtem(543);
+numberStrage.removetem(3);
+console.log(numberStrage.getitems());
