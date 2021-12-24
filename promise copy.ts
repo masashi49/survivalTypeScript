@@ -21,6 +21,14 @@ type user = {
     pass: string
 }
 
+type usereee = {
+    dome: string
+} & user
+
+function sfdasdf<T extends usereee>(arg: T): string {
+    return `${arg.pass}${arg.dome}${arg.age}`;
+}
+
 function getName<T extends argTypes>(arg: T): string {
     return `${arg.name}${arg.name}${arg.age}${arg.pass}${arg.fdsads}`;
 }
