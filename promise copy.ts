@@ -6,26 +6,30 @@ hoge("123");
 
 
 // オブジェクトを引数に受け取るときはextendsで担保する
-interface argTypes {
+interface argTypes extends user {
+    id: number;
+    age: number;
     name: string;
 }
+
 interface argTypes {
-    id: number,
-    age: number
+    fdsads: number;
 }
 
-interface user {
+
+type user = {
     pass: string
 }
 
 function getName<T extends argTypes>(arg: T): string {
-    return `${arg.name}${arg.name}${arg.age}`;
+    return `${arg.name}${arg.name}${arg.age}${arg.pass}${arg.fdsads}`;
 }
 
 getName({
-    famiry: "鈴木一郎",
+    pass: "鈴木一郎",
     id: 243,
     age: 234,
     name: "田中太郎",
-    sadf: "田中太郎"
+    sadf: "田中太郎",
+    fdsads: 3444478
 });
